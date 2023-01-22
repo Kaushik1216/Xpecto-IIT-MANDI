@@ -10,14 +10,13 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 export default function Signup() {
        const user=useSelector((state)=>state.userinfo);
-       console.log("from sign in page info ",user);
        const navigate=useNavigate();
   const [newdata,setnewdata]=useState(user)
    const nav=()=>[
        navigate("/")
    ]
    const savecurrentuser=async()=>{
-       try{   console.log("fwfwfer",newdata)
+       try{   
               const url = `${process.env.REACT_APP_BACKENDURL}/api/user/signup`;
               const  data  = await axios.post(url,{
                 user:user.email,

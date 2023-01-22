@@ -14,7 +14,6 @@ referralcode:"",
 const userinfo=(state =oldvalue,action)=>{
     if (action.type === "userinfo") {
         // return the new state
-        console.log("form reducers ",action.payload);
         return action.payload
       }
       // always return state

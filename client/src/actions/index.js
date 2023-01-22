@@ -10,7 +10,6 @@ export function changeuserinfo(newvalues){
         type:"userinfo",
         payload:newvalues,
       })
-      console.log("userinfot action ",newvalues);
     }
 }
 
